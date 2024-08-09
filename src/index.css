@@ -1,0 +1,245 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #eee;
+    font-family: Montserrat;
+}
+
+.container{
+    width: 80%;
+    margin: 0 auto;
+    max-width: 1440px;
+}
+
+.section{
+    padding: 3rem 0;
+}
+
+.nav{
+    height: 4rem;
+    border: 1px solid lightgray;
+    background-color: white;
+}
+.nav .container{
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.nav-list{
+    list-style-type: none;
+    display: flex;
+}
+.nav-link{
+    display: inline-block;
+    height: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 2rem;
+    text-decoration: none;
+    color: gray;
+    transition: 200ms;
+    border-bottom: 3px solid transparent;
+}
+
+.nav-link.active{
+    color: black;
+    border-bottom: 3px solid deepskyblue;
+    background-color: #eee;
+}
+.nav-link:hover{
+    background-color: lightgray;
+}
+.hero-section .container{
+
+}
+.heading{
+    margin-bottom: 2rem;
+    font-size: 10rem;
+}
+.btn{
+    height: 3rem;
+    display:  flex  ;
+    align-items: center;
+    text-decoration: none;
+    padding: 0 1.5rem;
+    border: none;
+    border-radius: 1000px;
+    cursor: pointer;
+}
+.btn-primary{
+    background-color: deepskyblue;
+    color: white;
+}
+.btn-secondary{
+    border: 2px solid gray;
+    color: gray;
+    background-color: white;
+}
+.hero-cta-wrapper{
+    display: flex;
+    gap: 1rem;
+}
+.transactions-section .container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+.transaction{
+    position: relative;
+    background-color: white;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.1);
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+}
+.transaction-title{
+    font-weight: 500;
+    color: #444;
+    margin-bottom: 0.5rem;
+}
+.edit-transaction{
+    color: gray;
+    cursor: pointer;
+}
+.transaction-control{
+    display: flex;
+    gap: 1rem;
+}
+.delete-icon{
+    color:gray;
+    cursor: pointer;
+}
+.delete-icon:hover{
+    color:red;
+    cursor: pointer;
+}
+.edit-transaction:hover{
+    color: black;
+    cursor: pointer;
+}
+.transaction.transaction-income::before{
+    position: absolute;
+    display: block;
+    content: '';
+    height: 70%;
+    width: 5px;
+    background-color: green;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.transaction.transaction-expense::before{
+    position: absolute;
+    display: block;
+    content: '';
+    height: 70%;
+    width: 5px;
+    background-color: red;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.amount-positive{
+    color: green;
+}
+.amount-negative{
+    color: red;
+}
+
+.add-transactions-section {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+  }
+  
+  .add-transaction-container {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .add-transaction-container h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  /* Form Styles */
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .form-group label {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 8px;
+    color: #333;
+  }
+  
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .form-group input[type="number"] {
+    -moz-appearance: textfield; /* Remove number input spinner */
+  }
+  
+  .form-group input[type="number"]::-webkit-inner-spin-button,
+  .form-group input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  
+  .form-group textarea {
+    height: 100px;
+    resize: vertical;
+  }
+  
+  .btn-submit {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-submit:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .container {
+      padding: 0 10px;
+    }
+  
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      font-size: 14px;
+    }
+  
+    .btn-submit {
+      font-size: 14px;
+      padding: 10px 16px;
+    }
+  }
